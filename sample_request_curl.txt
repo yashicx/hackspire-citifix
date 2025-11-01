@@ -1,0 +1,9 @@
+Example: Create an issue (with curl)
+
+curl -X POST http://localhost:5000/api/issues/create \
+  -F "description=Broken streetlight near park" \
+  -F "city=Kolkata" \
+  -F "image=@/path/to/photo.jpg"
+
+Example: Upvote
+curl -X POST http://localhost:5000/api/issues/<ISSUE_ID>/upvote
