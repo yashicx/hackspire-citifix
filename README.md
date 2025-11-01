@@ -1,30 +1,27 @@
-# CitiFix Backend (Full)
+# CitiFix Report System
 
-This is a Node.js + Express backend for the CitiFix 2.0 project.
-Features:
-- Create issues with image upload (Multer)
-- Persistent storage with MongoDB (Mongoose)
-- Upvote endpoints
-- Auto-post to Twitter/X when an issue crosses an upvote threshold
-- Simple safety checks to avoid duplicate posts
+🔗 **Live Demo:** [View Here](https://a6afdcf9-aaa7-4281-ba79-be0f31c772d0.dev21.app-preview.com/)
 
-## Quick start
+CitiFix is a web app that lets citizens report and track local civic issues easily.  
+Built using **Axicov**, it automates workflows and simplifies urban issue management.
 
-1. Clone / download
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Create `.env` from `.env.example` and fill credentials (Mongo URI, Twitter API keys)
-4. Run server:
-   ```
-   npm run dev
-   ```
-5. API endpoints:
-   - `POST /api/issues/create` - form-data: `image` (file), `description` (text)
-   - `POST /api/issues/:id/upvote` - increments upvotes and may trigger Twitter post
+## ✨ Features
+- Report civic issues with category & location  
+- Track issue status  
+- Simple, responsive UI  
+- Configurable via `axicov.config.ts`
 
-## Notes
-- Keep your Twitter keys secret. Do not commit `.env`.
-- The uploads folder is served statically at `/uploads`.
-- For production, serve uploads from cloud storage (S3/GCS/Firebase) and secure the API.
+## ⚙️ Setup
+```bash
+git clone https://github.com/YOURUSERNAME/CitiFix.git
+cd CitiFix
+npm install    # or bun install
+npm run dev    # or bun run dev
+
+Tech Stack
+Frontend: HTML / CSS / JS
+Backend: Axicov
+Hosting: App Preview (Hostinger)
+
+Built For
+Hackathon project showcasing Axicov integration in a civic tech solution.
